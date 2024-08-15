@@ -1,0 +1,115 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-08-15 10:04:25.848057",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item_code",
+  "item_name",
+  "column_break_ftdnt",
+  "vendor_list_price",
+  "section_break_pwxzu",
+  "quantity",
+  "column_break_gbcqj",
+  "vendor_total_price",
+  "section_break_ytmua",
+  "discount__commission",
+  "column_break_dn84m",
+  "vendor_net_price",
+  "section_break_zwbnr",
+  "sub_total"
+ ],
+ "fields": [
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "label": "Item Code",
+   "options": "Item"
+  },
+  {
+   "fetch_from": "item_code.item_name",
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "label": "Item Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "item_code.valuation_rate",
+   "fieldname": "vendor_list_price",
+   "fieldtype": "Currency",
+   "label": "Vendor List Price",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_ftdnt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_pwxzu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "quantity",
+   "fieldtype": "Int",
+   "label": "Quantity"
+  },
+  {
+   "fieldname": "column_break_gbcqj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "vendor_total_price",
+   "fieldtype": "Currency",
+   "label": "Vendor Total Price",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_ytmua",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "item_code.max_discount",
+   "fieldname": "discount__commission",
+   "fieldtype": "Float",
+   "label": "Discount / Commission"
+  },
+  {
+   "fieldname": "column_break_dn84m",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "vendor_net_price",
+   "fieldtype": "Currency",
+   "label": "Vendor Net Price",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_zwbnr",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "sub_total",
+   "fieldtype": "Currency",
+   "label": "Sub Total",
+   "options": "Company:company:default_currency",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-08-15 10:42:15.617665",
+ "modified_by": "Administrator",
+ "module": "Price Estimation Tool",
+ "name": "Price Estimation Tool Items",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
