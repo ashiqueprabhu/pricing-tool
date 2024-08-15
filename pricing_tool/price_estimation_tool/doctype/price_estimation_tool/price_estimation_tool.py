@@ -19,6 +19,7 @@ def generate_quotation(docname):
 	quotation = frappe.new_doc('Quotation')
 	quotation.party_name = estimation_doc.customer
 	quotation.taxes_and_charges = estimation_doc.taxes_and_charges
+	quotation.price_estimation = estimation_doc.name
 
 	quotation.set_taxes()
 

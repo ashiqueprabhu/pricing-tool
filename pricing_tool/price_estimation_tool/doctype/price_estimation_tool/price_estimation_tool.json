@@ -169,8 +169,13 @@
   }
  ],
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2024-08-15 12:19:29.766076",
+ "links": [
+  {
+   "link_doctype": "Quotation",
+   "link_fieldname": "price_estimation"
+  }
+ ],
+ "modified": "2024-08-15 14:07:53.336172",
  "modified_by": "Administrator",
  "module": "Price Estimation Tool",
  "name": "Price Estimation Tool",
