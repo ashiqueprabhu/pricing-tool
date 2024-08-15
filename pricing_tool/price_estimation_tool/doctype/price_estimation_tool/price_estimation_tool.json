@@ -1,0 +1,254 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-08-12 19:08:23.808692",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "general_tab",
+  "customer",
+  "currency",
+  "column_break_0pooe",
+  "posting_date",
+  "conversion_rate",
+  "pricing_details_section",
+  "item",
+  "item_name",
+  "vendor_list_price",
+  "discountcommission",
+  "column_break_yjhh9",
+  "quantity",
+  "vendor_total_price",
+  "vendor_net_price",
+  "sub_total",
+  "extra_costs_section",
+  "installation",
+  "training",
+  "packing",
+  "saber",
+  "column_break_geq82",
+  "freight_cost",
+  "customs_duty_cd",
+  "miscellaneous_costs_mc",
+  "total_extra_cost",
+  "add_ons_section",
+  "markup_percentage",
+  "column_break_0gmkk",
+  "taxes_and_charges"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series",
+   "options": "PR-EST-.YYYY.-"
+  },
+  {
+   "default": "Today",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Posting Date"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "item.valuation_rate",
+   "fieldname": "vendor_list_price",
+   "fieldtype": "Currency",
+   "label": "Vendor List Price",
+   "options": "currency"
+  },
+  {
+   "fetch_from": "item.max_discount",
+   "fieldname": "discountcommission",
+   "fieldtype": "Float",
+   "label": "Discount/Commission %"
+  },
+  {
+   "fieldname": "installation",
+   "fieldtype": "Currency",
+   "label": "Installation (SAR)",
+   "options": "Company:company:default_currency"
+  },
+  {
+   "fieldname": "training",
+   "fieldtype": "Currency",
+   "label": "Training (SAR)",
+   "options": "Company:company:default_currency"
+  },
+  {
+   "fieldname": "packing",
+   "fieldtype": "Currency",
+   "label": "Packing (SAR)",
+   "options": "Company:company:default_currency"
+  },
+  {
+   "fieldname": "column_break_geq82",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "saber",
+   "fieldtype": "Currency",
+   "label": "SABER (SAR)",
+   "options": "Company:company:default_currency"
+  },
+  {
+   "fieldname": "freight_cost",
+   "fieldtype": "Currency",
+   "label": "Freight Cost (SAR)",
+   "options": "Company:company:default_currency"
+  },
+  {
+   "fieldname": "customs_duty_cd",
+   "fieldtype": "Currency",
+   "label": "Customs Duty (SAR)",
+   "options": "Company:company:default_currency"
+  },
+  {
+   "fieldname": "miscellaneous_costs_mc",
+   "fieldtype": "Currency",
+   "label": "Miscellaneous Costs (SAR)",
+   "options": "Company:company:default_currency"
+  },
+  {
+   "fieldname": "markup_percentage",
+   "fieldtype": "Percent",
+   "label": "Markup Percentage (%)"
+  },
+  {
+   "fieldname": "column_break_0pooe",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "add_ons_section",
+   "fieldtype": "Section Break",
+   "label": "Add Ons"
+  },
+  {
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_yjhh9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "general_tab",
+   "fieldtype": "Section Break",
+   "label": "Pricing Details"
+  },
+  {
+   "fieldname": "vendor_total_price",
+   "fieldtype": "Currency",
+   "label": "Vendor Total Price",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "vendor_net_price",
+   "fieldtype": "Currency",
+   "label": "Vendor Net Price",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "pricing_details_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "extra_costs_section",
+   "fieldtype": "Section Break",
+   "label": "Extra Costs"
+  },
+  {
+   "fieldname": "total_extra_cost",
+   "fieldtype": "Currency",
+   "label": "Total Extra Cost",
+   "options": "Company:company:default_currency",
+   "read_only": 1
+  },
+  {
+   "default": "EUR",
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "conversion_rate",
+   "fieldtype": "Float",
+   "label": "Exchange Rate",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "item.item_name",
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "label": "Item Name"
+  },
+  {
+   "fieldname": "sub_total",
+   "fieldtype": "Currency",
+   "label": "Sub Total ",
+   "options": "Company:company:default_currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "quantity",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Quantity",
+   "reqd": 1
+  },
+  {
+   "fieldname": "taxes_and_charges",
+   "fieldtype": "Link",
+   "label": "Taxes and Charges",
+   "options": "Sales Taxes and Charges Template"
+  },
+  {
+   "fieldname": "column_break_0gmkk",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-08-13 22:22:04.001978",
+ "modified_by": "Administrator",
+ "module": "Price Estimation Tool",
+ "name": "Price Estimation Tool",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
